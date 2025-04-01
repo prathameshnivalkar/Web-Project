@@ -1,0 +1,117 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Idli",
+      "price": "60.00",
+      "url": "./images/idli.jpg",
+      "category": "Fast Food"
+    },
+    {
+      "id": 2,
+      "title": "Veg Burger",
+      "price": "75.00",
+      "url": "./images/burger.jpg",
+      "category": "Fast Food"
+    },
+    {
+      "id": 3,
+      "title": "Schezwan Rice Bowl",
+      "price": "220.00",
+      "url": "./images/schezwanrice.jpg",
+      "category": "Rice Menu"
+    },
+    {
+      "id": 4,
+      "title": "French Fries",
+      "price": "90.00",
+      "url": "./images/frenchfries.jpg",
+      "category": "Fast Food"
+    },
+    {
+      "id": 5,
+      "title": "Toasted Sandwich",
+      "price": "59.00",
+      "url": "./images/sandwich.jpg",
+      "category": "Fast Food"
+    },
+    {
+      "id": 6,
+      "title": "Biscuit",
+      "price": "70.00",
+      "url": "./images/biscuit.jpg",
+      "category": "Desserts"
+    },
+    {
+      "id": 7,
+      "title": "Berry Ice Cream",
+      "price": "50.00",
+      "url": "./images/icecream.jpg",
+      "category": "Desserts"
+    },
+    {
+      "id": 8,
+      "title": "Margherita Pizza",
+      "price": "220.00",
+      "url": "./images/pizza.jpg",
+      "category": "Pizza"
+    },
+    {
+      "id": 9,
+      "title": "Veg Fried Rice",
+      "price": "180.00",
+      "url": "./images/rice.jpg",
+      "category": "Rice Menu"
+    },
+    {
+      "id": 10,
+      "title": "Veg Tacos",
+      "price": "100.00",
+      "url": "./images/tacos.jpg",
+      "category": "Pizza"
+    },
+    {
+      "id": 11,
+      "title": "Veg Paradise",
+      "price": "120.00",
+      "url": "./images/pizza4.jpg",
+      "category": "Pizza"
+    },
+    {
+      "id": 12,
+      "title": "Paneer Makhani",
+      "price": "140.00",
+      "url": "./images/pizza3.jpg",
+      "category": "Pizza"
+    },
+    {
+      "id": 13,
+      "title": "Espresso",
+      "price": "120.00",
+      "url": "./images/coffee2.jpg",
+      "category": "Coffee"
+    },
+    {
+      "id": 14,
+      "title": "Cold Coffee",
+      "price": "180.00",
+      "url": "./images/coffee1.jpg",
+      "category": "Coffee"
+    },
+    {
+      "id": 15,
+      "title": "Brownie",
+      "price": "60.00",
+      "url": "./images/cake.jpg",
+      "category": "Desserts"
+    },
+    {
+      "id": 16,
+      "title": "Frappuccino",
+      "price": "80.00",
+      "url": "./images/coffee5.jpg",
+      "category": "Coffee"
+    }
+  
+  ]
+}
