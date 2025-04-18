@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+        <a href="index.html" class="back">← Continue Shopping</a>
+    </header>
+
+    <main>
+        <div class="cart-container">
+            <div class="cart-items" id="cart-items"></div>
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <p>Total Items: <span id="total-items">0</span></p>
+                <p>Total Price: $<span id="total-price">0.00</span></p>
+                <button id="checkout">Proceed to Checkout</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let cartItemsContainer = document.getElementById("cart-items");
+            let totalItems = document.getElementById("total-items");
+            let totalPrice = document.getElementById("total-price");
+
+            cartItemsContainer.innerHTML = "";
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                let itemElement = document.createElement("div");
+                itemElement.classList.add("cart-item");
+                itemElement.innerHTML = `
+                    <p>${item.name} - $${item.price.toFixed(2)}</p>
+                    <button onclick="removeFromCart(${index})">Remove</button>
+                `;
+                cartItemsContainer.appendChild(itemElement);
+            });
+
+            totalItems.textContent = cart.length;
+            totalPrice.textContent = total.toFixed(2);
+        }
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            loadCart();
+        }
+
+        document.addEventListener("DOMContentLoaded", loadCart);
+    </script>
+</body>
+</html>

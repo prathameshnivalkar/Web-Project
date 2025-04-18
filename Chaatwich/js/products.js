@@ -58,7 +58,7 @@ const displayProductItems = (items) => {
                   <div class="price">
                     <span>Price</span><span class="color"> ₹${product.price}</span>
                   </div>
-                  <div class="button btn">Add To Cart+</div>
+                  <button onClick= class="button btn">Add To Cart+</button>
                 </div>
               </div>
                   `

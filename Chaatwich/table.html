@@ -105,41 +105,57 @@
 
     <script>
         function sendMessage() {
-            const inputField = document.getElementById("user-input");
-            const message = inputField.value.trim().toLowerCase();
-            if (message === "") {
-                return;
-            }
-            const chatBox = document.getElementById("chat-box");
-            const userMessage = `<div class='message user-message'>${message}</div>`;
-            chatBox.innerHTML += userMessage;
+    const inputField = document.getElementById("user-input");
+    const message = inputField.value.trim().toLowerCase();
+    if (message === "") {
+        return;
+    }
+    const chatBox = document.getElementById("chat-box");
+    const userMessage = `<div class='message user-message'>${message}</div>`;
+    chatBox.innerHTML += userMessage;
 
-            inputField.value = "";
+    inputField.value = "";
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+    if (message === "hi") {
+        setTimeout(() => {
+            const botReply = `<div class='message bot-message'>Hello sir</div>`;
+            chatBox.innerHTML += botReply;
             chatBox.scrollTop = chatBox.scrollHeight;
-              
-            if(message ==="hi")
-            {
-                setTimeout(() => {
-                const botReply = `<div class='message bot-message'>Hello sir</div>`;
+        }, 1000);
+    }
+    if (message === "require table") {
+        setTimeout(() => {
+            const botReply = `<div class='message bot-message'>Table for how many people?</div>`;
+            chatBox.innerHTML += botReply;
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }, 1000);
+    }
+    if (message === "ok") {
+        setTimeout(() => {
+            const botReply = `<div class='message bot-message'>Thank you</div>`;
+            chatBox.innerHTML += botReply;
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }, 1000);
+    }
+
+    const peopleCount = parseInt(message);
+    if (!isNaN(peopleCount)) {
+        if (peopleCount > 0 && peopleCount <= 6) {
+            setTimeout(() => {
+                const botReply = `<div class='message bot-message'>Table is vacant</div>`;
                 chatBox.innerHTML += botReply;
                 chatBox.scrollTop = chatBox.scrollHeight;
             }, 1000);
-            }
-            if(message==="requiretable") {
-                setTimeout(() => {
-                const botReply = `<div class='message bot-message'></div>`;
+        } else if (peopleCount > 6) {
+            setTimeout(() => {
+                const botReply = `<div class='message bot-message'>Table not vacant</div>`;
                 chatBox.innerHTML += botReply;
                 chatBox.scrollTop = chatBox.scrollHeight;
             }, 1000);
-            }
-            if(message==="ok") {
-                setTimeout(() => {
-                const botReply = `<div class='message bot-message'>Thank you</div>`;
-                chatBox.innerHTML += botReply;
-                chatBox.scrollTop = chatBox.scrollHeight;
-            }, 1000);
-            }
         }
+    }
+}
     </script>
 </body>
 </html>
